@@ -13,12 +13,16 @@ urlpatterns = [
 
     # path for contact us view
 
-    # path for registration
-
-    # path for login
-
-    # path for logout
-
+    # path for registration by Me
+    path('registration/', views.registration_request, name='registration'),
+    
+    # path for login by Me
+    path('login/', views.login_request, name='login'),
+    
+    # path for logoutby Me
+    path('logout/', views.logout_request, name='logout'),
+    
+    # path default
     path(route='', view=views.get_dealerships, name='index'),
 
     # path for dealer reviews view
